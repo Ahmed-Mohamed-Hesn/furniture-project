@@ -1,0 +1,232 @@
+*{
+  margin: 0px;
+  font-family: 'montserrat','cairo',sans-serif;
+}
+.flex-data{
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+:root{
+  --primary-color: #E1ECFF;
+  --secondery-color:#00B1FF;
+  --thirdy-color:#FBB03B;
+  --dark-color:#000;
+  --light-color:#fff;
+  --gray-color: #a09f9aae;
+  --button-color:#1A6EFF;
+
+
+  --black-filter: invert(0%) sepia(96%) saturate(31%) hue-rotate(26deg) brightness(100%) contrast(100%);
+  --white-filter: invert(100%) sepia(42%) saturate(0%) hue-rotate(59deg) brightness(110%) contrast(94%);
+  --blue-filter: invert(39%) sepia(61%) saturate(6707%) hue-rotate(215deg) brightness(105%) contrast(102%);
+  --gray-filter: invert(77%) sepia(5%) saturate(135%) hue-rotate(314deg) brightness(84%) contrast(95%);
+  --yellow-filter: invert(77%) sepia(85%) saturate(1102%) hue-rotate(328deg) brightness(100%) contrast(98%);
+}
+ul{
+  list-style: none;
+  padding: 0px;
+}
+a{
+  text-decoration: none;
+}
+
+/*header*/
+header {
+  padding: 150px 150px;
+}
+
+header .container {
+  width: 80%;
+}
+
+header .container .contain {
+  margin: 50px 250px;
+  padding: 15px;
+  background-color: var(--light-color);
+  border: 2px solid var(--gray-color);
+}
+
+header .container .contain h1 {
+  margin: 20px 80px 20px 80px;;
+  font-size: 40px;
+  font-weight: 900;
+  text-transform: capitalize;
+}
+
+header .container .contain p {
+  margin: 15px 155px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .container .contain form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+header .container .contain form [type="email"] {
+  width: 350px;
+  height: 30px;
+  border-radius: 25px;
+  padding: 5px 10px;
+  border: 1px solid var(--gray-color);
+}
+
+header .container .contain form p{
+text-transform: uppercase;
+position: relative;
+}
+
+header .container .contain form p::after{
+  content: '';
+  position: absolute;
+  width: 175px;
+  height: 2px;
+  background-color: var(--gray-color);
+  top: 10px;
+  left: 100%;
+}
+
+
+header .container .contain form p::before{
+  content: '';
+  position: absolute;
+  width: 175px;
+  height: 2px;
+  background-color: var(--gray-color);
+  top: 10px;
+  height: 2px;
+  left: -175px;
+}
+
+header .container .contain form .phone{
+  width: 350px;
+  height: 40px;
+  border-radius: 25px;
+  border: 1px solid var(--gray-color);
+  background-color: var(--light-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+}
+
+header .container .contain form [type="tel"] {
+  width: 200px;
+  height: 30px;
+  padding: 4px 10px;
+  border: 1px solid transparent;
+}
+
+header .container .contain form select{
+  width: 75px;
+  height: 30px;
+  padding: 4px 10px;
+  border-radius: 25px;
+  border: 1px solid transparent;
+  background-color: var(--primary-bk-color);
+}
+
+header .container .contain form [type="email"]:hover,
+header .container .contain form [type="tel"]:hover,
+header .container .contain form select:hover{
+  border: 2px solid var(--secondary-color);
+}
+
+header .container .contain form select option{
+  background-color: var(--primary-bk-color);
+ 
+}
+
+header .container .contain form button{
+  background-color: var(--thirdy-color);
+  border: 0;
+  border-radius: 20px;
+  padding: 10px;
+  text-transform: capitalize;
+  font-size: 15px;
+  width: 350px;
+  font-weight: 700;
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+header .container .contain form button img{
+  width: 20px;
+  height: 20px;
+}
+
+header .container .contain form button::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--gray-color);
+  top: 0;
+  left: -100%;
+  transition: left 0.5s;
+}
+
+header .container .contain form button:hover::after {
+  left: 0;
+  z-index: -1;
+}
+
+header .container .contain form button:hover {
+  color: var(--light-color);
+  border: 2px solid var(--light-color);
+}
+
+header .container .contain form .sign-up{
+display: flex;
+align-items: center;
+justify-content: space-around;
+flex-direction: row;
+gap: 10px;
+margin: 10px 0;
+}
+
+header .container .contain form .sign-up p{
+  margin: 0;
+}
+
+
+
+header .container .contain form .sign-up a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  margin: 0 10px;
+ color: var(--dark-color);
+ font-weight: 900;
+}
+
+header .container .contain form .sign-up a::after {
+  content: '';
+  background-color: var(--gray-color);
+  height: 3px;
+  width: 45px;
+  position: absolute;
+  top: 20px;
+  left: -100%;
+  transition: left 0.5s;
+}
+
+header .container .contain form .sign-up a:hover {
+  color: var(--gray-color);
+}
+
+header .container .contain form .sign-up a:hover::after {
+  color: var(--gray-color);
+  left: 0;
+  z-index: -1;
+}
